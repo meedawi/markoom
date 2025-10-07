@@ -1,0 +1,11 @@
+The source code for the "markoom" library is licensed under the MIT License, as detailed in the LICENSE file.
+
+The Quranic text data files located in the `src/markoom/data/` directory are sourced from the Tanzil Project (tanzil.net). These files have been highly verified and are provided for research and analysis purposes under the terms of the Tanzil Project's license.
+
+**IMPORTANT NOTICE OF USE:**
+
+Users of this library are granted permission to use and distribute this data verbatim as part of this software package.
+
+HOWEVER, MODIFYING THE QURANIC TEXT DATA FILES (`quran-uthmani-min.xml` and `quran-simple-clean.xml`) IS STRICTLY PROHIBITED.
+
+Any modification to these data files can lead to the corruption or misrepresentation of the Holy Quran. The authors of this library are not responsible for any consequences arising from the unauthorized modification of these data files. Please respect the sanctity and integrity of the Quranic text.
