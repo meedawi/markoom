@@ -30,5 +30,35 @@ You can install `markoom` directly from the Python Package Index (PyPI):
 
 ```bash
 pip install markoom
+import markoom
 
+# 1. Initialize the library with the desired Quran script
+quran = markoom.Quran(script='uthmani')
+
+# 2. Get a Surah by its number (e.g., Surah 1, Al-Fatiha)
+al_fatiha = quran.get_surah(1)
+print(f"Analyzing Surah {al_fatiha.number}: {al_fatiha.name}")
+
+# 3. Get a specific Ayah from the Surah
+ayah_7 = al_fatiha.get_ayah(7)
+print(f"\nRaw Text of Ayah {ayah_7.surah_number}:{ayah_7.number}:")
+print(f"'{ayah_7.raw_text}'")
+
+# 4. Perform default analysis (normalized, without diacritics)
+word_count = ayah_7.word_count()
+letter_count = ayah_7.letter_count()
+
+print(f"\nThis Ayah has {word_count} words and {letter_count} letters (default processing).")
+
+# 5. Use advanced options for more specific analysis
+# Example: Count words, but split attached 'و' (wa)
+word_count_split = ayah_7.word_count(split_on_wa=True)
+words_split = ayah_7.get_words(split_on_wa=True)
+
+print(f"\nWith 'wa' splitting, the word count is: {word_count_split}")
+print(f"The words are: {words_split}")
+
+# 6. Analyze an entire Surah
+total_words_in_fatiha = al_fatiha.word_count()
+print(f"\nTotal words in {al_fatiha.name}: {total_words_in_fatiha}")
 
